@@ -34,5 +34,14 @@ Then to run it:
 
 You might want to consider running all these with `cron` on a server. Just saying.
 
+## Integration with ElasticSearch
+* `wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.3.4.tar.gz`
+* `tar -xvf elasticsearch-1.3.4.tar.gz`
+* `sudo apt-get install default-jre default-jdk` to install Java
+* Start ES instance with `bin/elasticsearch` in the directory where you extracted ElasticSearch
+
+Then uncomment line 2 and 34-40 in `save_to_db.py`
+
+
 ## License
 [PDD/ Unlicense](http://choosealicense.com/licenses/unlicense/)

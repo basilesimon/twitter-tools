@@ -1,4 +1,5 @@
 import MySQLdb
+# import elasticsearch
 
 
 db = MySQLdb.connect(host="",
@@ -29,3 +30,11 @@ def save_to_db(author, text, url, id_str):
         print "Error", e.args[0], e.args[1]
         db.rollback()
         print "ERROR writing database"
+
+    # es = elasticsearch.Elasticsearch()
+    # es.index(index="tweets", doc_type="tweet", id=id, body={
+    #     "Author": author,
+    #     "Text": text.encode('utf-8'),
+    #     "Url": url,
+    #     "Tweet_Id": id_str
+    # })
